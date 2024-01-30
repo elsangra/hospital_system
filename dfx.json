@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "patient_management_backend": {
+      "candid": "src/patient_management_backend/patient_management_backend.did",
+      "package": "patient_management_backend",
+      "type": "rust"
+    },
+    "patient_management_frontend": {
+      "dependencies": [
+        "patient_management_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/patient_management_frontend/src/index.html"
+      },
+      "source": [
+        "src/patient_management_frontend/assets",
+        "dist/patient_management_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
